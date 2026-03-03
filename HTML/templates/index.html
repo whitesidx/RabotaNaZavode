@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мої події</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 700px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        input, select {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #5563d6;
+            transform: translateY(-2px);
+        }
+
+        .event {
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .low { background: #38b000; }
+        .medium { background: #ff9f1c; }
+        .high { background: #e63946; }
+
+        .event-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .delete {
+            text-decoration: none;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 10px;
+            border-radius: 8px;
+            color: white;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .delete:hover {
+            background: rgba(255,255,255,0.35);
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📅 список екскурсий</h1>
+
+    <form method="POST">
+        <input type="text" name="title" placeholder="Назва події" required>
+        <input type="date" name="date">
+        <input type="time" name="time">
+
+        <select name="priority">
+            <option value="low">Низький пріоритет</option>
+            <option value="medium">Середній пріоритет</option>
+            <option value="high">Високий пріоритет</option>
+        </select>
+
+        <button type="submit">Додати подію</button>
+    </form>
+
+    {% for event in events %}
+        <div class="event {{ event.priority }}">
+            <div class="event-info">
+                <strong>{{ event.title }}</strong>
+                <small>{{ event.date }} {{ event.time }}</small>
+            </div>
+            <a class="delete" href="/delete/{{ event.id }}">Видалити</a>
+        </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
