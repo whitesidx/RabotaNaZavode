@@ -1,0 +1,16 @@
+[
+    {
+        "id": "57f6c2ce-14ed-40e7-bbc0-87cce6c42d1d",
+        "title": "завдання 1.1",
+        "description": "зробити домашку із уроку 1.1 другого курсу",
+        "priority": "high",
+        "status": "done"
+    },
+    {
+        "id": "52f97a90-f00b-430f-877f-71d2cf86ce98",
+        "title": "завдання 1.2",
+        "description": "зробити домашку із завдання 1.2",
+        "priority": "high",
+        "status": "done"
+    }
+]
