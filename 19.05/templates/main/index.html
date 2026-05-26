@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Головна</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Вітаю на сайті!</h1>
+    <nav>
+        <a href="{% url 'index' %}">Головна</a>
+        <a href="{% url 'about' %}">Про нас</a>
+        <a href="{% url 'contact' %}">Контакти</a>
+        <a href="{% url 'gallery' %}">Галерея</a>
+    </nav>
+</body>
+</html>
