@@ -1,0 +1,127 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #e0e0e0;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: #fafafa;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 200px;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #f5f5f5;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: url("images/header-bg.jpg") no-repeat center/cover; /* твоя картинка */
+  color: #fff; /* щоб текст був білий поверх картинки */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: url("images/Group 9.png") no-repeat center/cover;
+color: #fff;
+
+  color: #fff; /* текст білий поверх картинки */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
